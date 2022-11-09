@@ -6,15 +6,27 @@ namespace JohnBundalian
 {
 public class Plant : MonoBehaviour
 {
-         //Variables:
-         public int GetHealthiness()
+        private string name;
+        private Herbs species= Herbs.Undefined;
+        private int healthiness;
+        private int price;
+
+        void Start()
         {
-            return healthiness:
+            Herbs myPlant;
+
+            myPlant = Herbs.BlackLotus;
+        }
+        //Variables:
+        public int GetHealthiness()
+        {
+            return healthiness;
         }
 
-        public void SetInitialSats(string newName, int newHealthiness int newPrice)
+        public void SetInitialStats(string newName, Herbs newHerbs, int newHealthiness, int newPrice)
         {
             name = newName;
+            species = newHerbs;
             healthiness = newHealthiness;
             price = newPrice;
         }
