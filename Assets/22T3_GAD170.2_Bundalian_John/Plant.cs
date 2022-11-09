@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace JohnBundalian
 {
-public class Plant : MonoBehaviour
-{
+    public class Plant : MonoBehaviour
+    {
         private string name;
-        private Herbs species= Herbs.Undefined;
+        private Herbs species = Herbs.Undefined;
         private int healthiness;
         private int price;
 
@@ -29,11 +29,13 @@ public class Plant : MonoBehaviour
             species = newHerbs;
             healthiness = newHealthiness;
             price = newPrice;
+
+           // newHerbs.herbsName = Herbs[UnityEngine.Random.Range(0, HerbsNames.Count())];
+             //   newHealthiness.maxHealth = Random.Range(1, 10);
+           // newPrice.maxPrice = Random.Range(1, 20);
         }
 
-        // Methods:
-
-}
+    }
 }
 
 

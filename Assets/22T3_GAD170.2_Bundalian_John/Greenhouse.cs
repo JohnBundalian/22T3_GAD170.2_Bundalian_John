@@ -43,10 +43,21 @@ namespace JohnBundalian
 
         }
 
+        public void MainMenu()
+        {
+            Debug.Log("Game goes to Main Menu");
+        }
+
         public void KeepPlant()
         {
             Debug.Log("Keep Plant");
         }
+
+        public void DiscardPlant()
+        {
+            Debug.Log("Plant Discarded");
+        }
+
     }
 }
 
