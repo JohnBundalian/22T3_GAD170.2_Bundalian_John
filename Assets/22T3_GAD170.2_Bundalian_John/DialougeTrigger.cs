@@ -6,7 +6,7 @@ namespace JohnBundalian
 {
     public class DialougeTrigger : MonoBehaviour
     {
-                public Dialouge dialouge; 
+                // public Dialouge dialouge; 
     }
 }
 

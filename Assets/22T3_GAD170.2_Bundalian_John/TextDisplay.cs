@@ -7,6 +7,7 @@ namespace JohnBundalian
 {
     public class UserInterface : MonoBehaviour
     {
+        Herbs myPlant;
 
         //This method adds text to what is present.
         // In the text field UI.

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace JohnBundalian
@@ -10,35 +11,56 @@ namespace JohnBundalian
 
     public class Greenhouse : MonoBehaviour
     {
+        private int plantValue;
+        private float plantHealthiness;
+        public GameObject plant;
+        private int plantcount;
+        private GameObject[] totalplants = new GameObject[10];
+        Herbs myPlant;
+        
 
         void Start()
         {
-            Herbs myPlant;
+            totalplants[plantcount] = plant;
+            plantcount++;
+            if plantcount = 
 
+            // Randomies Plants Value
+            plantValue = UnityEngine.Random.Range(1, 21);
+            // Randomises Plants health.
+            plantHealthiness = UnityEngine.Random.Range(1, 101);         
             myPlant = Herbs.BlackLotus;
-            myPlant = (Herbs)Random.Range(0, Enum.GetValues(typeof(Herbs)).Cast<Herbs>().Max());
-
+            myPlant = (Herbs)UnityEngine.Random.Range(0, 3);
+            
+            // myPlant = (Herbs)UnityEngine.Random.Range(0, Enum.GetValues(typeof(Herbs)).Cast<Herbs>().Max);
+            // :D all good thats just another Gamer dude outside SAE who I reached out too
         }
 
-        // Player will starts a fresh new game.
         public void NewGame()
         {
 
         }
+        
 
         // Starts Players turn.
         public void NewTurn()
         {
-// Instantiate new plant gameobject
-// Set new plant variables.
-// Player givens options Keep or Discard new plant.
-// Player click Keep or discard button.
+
+         // Puts value into plan var detects what put in (notes for Learning Journal Thank you!)
+            var plantObject = Instantiate(plant, transform.position, transform.rotation);
+            plantObject.GetComponent<Plant>().SetInitialStats(null,myPlant, plantHealthiness,plantValue);
+            plant = plantObject;
+            // Instantiate new plant gameobject
+            // Set new plant variables.
+            // Player givens options Keep or Discard new plant.
+            // Player click Keep or discard button.
         }
 
         // Ends a Player turn.
         public void EndTurn()
         {
-
+            //
+            // Else if objectDestroy
         }
 
         // Game ends.
@@ -61,6 +83,10 @@ namespace JohnBundalian
         {
             Debug.Log("Plant Discarded");
         }
+
+        // yeah i put those in while i trying to figure out the buttons on text thingy
+        // like on debug log only
+
 
     }
 }
