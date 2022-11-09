@@ -23,7 +23,12 @@ namespace JohnBundalian
         {
             totalplants[plantcount] = plant;
             plantcount++;
-            if plantcount = 
+
+            plantcount.Add(plant);
+            if (plantcount.Count() == 11)
+            
+                plantcount.RemoveAt(0);
+            
 
             // Randomies Plants Value
             plantValue = UnityEngine.Random.Range(1, 21);
