@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace JohnBundalian
@@ -14,6 +16,8 @@ namespace JohnBundalian
             Herbs myPlant;
 
             myPlant = Herbs.BlackLotus;
+            myPlant = (Herbs)Random.Range(0, Enum.GetValues(typeof(Herbs)).Cast<Herbs>().Max());
+
         }
 
         // Player will starts a fresh new game.
