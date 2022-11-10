@@ -19,17 +19,14 @@ namespace JohnBundalian
         Herbs myPlant;
         
 
-        void Start()
+        public void Start()
         {
-            totalplants[plantcount] = plant;
-            plantcount++;
-
-            plantcount.Add(plant);
-            if (plantcount.Count() == 11)
-            
-                plantcount.RemoveAt(0);
-            
-
+            if (plantcount < 10)
+            {
+                totalplants[plantcount] = plant;
+                plantcount++;
+            }
+                      
             // Randomies Plants Value
             plantValue = UnityEngine.Random.Range(1, 21);
             // Randomises Plants health.
