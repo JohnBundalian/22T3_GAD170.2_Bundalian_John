@@ -36,6 +36,20 @@ namespace JohnBundalian
            // newPrice.maxPrice = Random.Range(1, 20);
         }
 
+        public Plant RandomisePlant()
+        {
+            name = newName;
+            healthiness = Random.Range(1, 10);
+            price = Random.Range(1, 10);
+        }
+
+        public void DisplayStats()
+        {
+            // Print Name
+            // Print Health
+            // Print Price
+        }
+
     }
 }
 
