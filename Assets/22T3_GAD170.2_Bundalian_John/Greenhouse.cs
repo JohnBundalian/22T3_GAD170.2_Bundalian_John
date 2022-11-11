@@ -61,7 +61,6 @@ namespace JohnBundalian
         // Ends a Player turn.
         public void EndTurn()
         {
-            //
             // Else if objectDestroy
         }
 
@@ -78,11 +77,13 @@ namespace JohnBundalian
 
         public void KeepPlant()
         {
+            plantcount.Add(plant.gameObject);
             Debug.Log("Keep Plant");
         }
 
         public void DiscardPlant()
         {
+            Destroy(plant.gameObject);
             Debug.Log("Plant Discarded");
         }
 
