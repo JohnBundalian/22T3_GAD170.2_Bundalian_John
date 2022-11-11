@@ -27,7 +27,7 @@ namespace JohnBundalian
         // prevents any furuther text from being added
         private void Problems(string errorReport)
         {
-            myPlant.Addtext("you gained one plant");
+            // myPlant.Addtext("you gained one plant");
         }
     }
 }
